@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishGuard - Help & FAQ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 40px 30px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .section h2 {
+      font-size: 24px;
+      color: #667eea;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .faq-item {
+      margin-bottom: 25px;
+    }
+    
+    .faq-question {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .faq-question::before {
+      content: "Q:";
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 14px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    
+    .faq-answer {
+      font-size: 15px;
+      color: #666;
+      padding-left: 40px;
+      line-height: 1.7;
+    }
+    
+    .faq-answer ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .faq-answer li {
+      margin: 5px 0;
+    }
+    
+    .faq-answer code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: "SF Mono", Monaco, monospace;
+      font-size: 13px;
+    }
+    
+    .verdict-examples {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .verdict-card {
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .verdict-card.safe {
+      background: #d1fae5;
+      border: 2px solid #10b981;
+    }
+    
+    .verdict-card.suspicious {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+    }
+    
+    .verdict-card.scam {
+      background: #fee2e2;
+      border: 2px solid #ef4444;
+    }
+    
+    .verdict-card.phishing {
+      background: #fecaca;
+      border: 2px solid #dc2626;
+    }
+    
+    .verdict-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    .verdict-label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    .tip-box {
+      background: #f0f9ff;
+      border-left: 4px solid #3b82f6;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    .tip-box strong {
+      color: #1e40af;
+    }
+    
+    .footer {
+      background: #f9fafb;
+      padding: 30px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛡️ PhishGuard Help & FAQ</h1>
+      <p>Your guide to staying safe online</p>
+    </div>
+    
+    <div class="content">
+      <!-- What is PhishGuard -->
+      <div class="section">
+        <h2>What is PhishGuard?</h2>
+        <div class="faq-item">
+          <div class="faq-answer">
+            PhishGuard is a Safari extension that protects you from phishing websites, scams, and fraudulent content. It analyzes websites in real-time using multiple detection methods including AI, domain age checking, SSL certificate validation, and suspicious content detection.
+          </div>
+        </div>
+      </div>
+      
+      <!-- How It Works -->
+      <div class="section">
+        <h2>How It Works</h2>
+        <div class="faq-item">
+          <div class="faq-question">What does PhishGuard check?</div>
+          <div class="faq-answer">
+            PhishGuard analyzes multiple signals:
+            <ul>
+              <li><strong>Domain Age:</strong> Very new domains (< 7 days) are often used for phishing</li>
+              <li><strong>SSL Certificate:</strong> Checks if the certificate is valid and from a trusted authority</li>
+              <li><strong>Content Analysis:</strong> AI detects phishing patterns in page content</li>
+              <li><strong>Suspicious Keywords:</strong> Looks for scam-related terms like "guaranteed returns", "free money"</li>
+              <li><strong>Brand Impersonation:</strong> Detects fake sites pretending to be banks or companies</li>
+              <li><strong>Form Security:</strong> Warns if forms submit data over insecure connections</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">What do the different verdicts mean?</div>
+          <div class="faq-answer">
+            <div class="verdict-examples">
+              <div class="verdict-card safe">
+                <div class="verdict-icon">✅</div>
+                <div class="verdict-label">Safe</div>
+              </div>
+              <div class="verdict-card suspicious">
+                <div class="verdict-icon">⚠️</div>
+                <div class="verdict-label">Suspicious</div>
+              </div>
+              <div class="verdict-card scam">
+                <div class="verdict-icon">🚨</div>
+                <div class="verdict-label">Scam</div>
+              </div>
+              <div class="verdict-card phishing">
+                <div class="verdict-icon">🚨</div>
+                <div class="verdict-label">Phishing</div>
+              </div>
+            </div>
+            <ul>
+              <li><strong>Safe:</strong> No suspicious indicators detected</li>
+              <li><strong>Suspicious:</strong> Some concerning signals, proceed with caution</li>
+              <li><strong>Scam:</strong> Multiple red flags detected, likely fraudulent</li>
+              <li><strong>Phishing:</strong> High confidence phishing attempt, avoid entering personal information</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Common Questions -->
+      <div class="section">
+        <h2>Common Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">Why is a legitimate site flagged as suspicious?</div>
+          <div class="faq-answer">
+            PhishGuard may occasionally flag legitimate sites (false positives) for several reasons:
+            <ul>
+              <li>The site is very new (< 30 days old)</li>
+              <li>The site uses an uncommon SSL certificate provider</li>
+              <li>The site contains keywords that are commonly used in scams</li>
+              <li>The site is hosted on a free platform (Weebly, Netlify, etc.)</li>
+            </ul>
+            <strong>What to do:</strong> If you trust the site, click the extension icon and enable "Trust this site" to add it to your allowlist.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Why didn't PhishGuard detect a phishing site?</div>
+          <div class="faq-answer">
+            No phishing detector is 100% accurate. PhishGuard may miss some phishing sites if:
+            <ul>
+              <li>The site is very sophisticated and mimics legitimate sites well</li>
+              <li>The site is brand new and not yet in any databases</li>
+              <li>The site uses advanced evasion techniques</li>
+            </ul>
+            <strong>Always practice safe browsing:</strong> Verify URLs carefully, don't click suspicious links, and never share passwords or financial information unless you're certain the site is legitimate.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">How do I add a site to my allowlist?</div>
+          <div class="faq-answer">
+            1. Click the PhishGuard extension icon in Safari<br>
+            2. Toggle the "Trust this site" switch<br>
+            3. The site will no longer be scanned<br>
+            <br>
+            <strong>Note:</strong> Only add sites you completely trust to your allowlist.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Does PhishGuard collect my browsing data?</div>
+          <div class="faq-answer">
+            PhishGuard analyzes websites locally on your device. We do not:
+            <ul>
+              <li>Store your browsing history</li>
+              <li>Track which sites you visit</li>
+              <li>Share your data with third parties</li>
+            </ul>
+            The extension only makes external requests to:
+            <ul>
+              <li>WHOIS servers (to check domain age)</li>
+              <li>Tranco API (to check site popularity)</li>
+            </ul>
+            These requests are necessary for classification and contain only the domain name, not your full browsing activity.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Why is the extension slow sometimes?</div>
+          <div class="faq-answer">
+            Classification can take a few seconds because PhishGuard:
+            <ul>
+              <li>Queries WHOIS servers to check domain age (can take 5-10 seconds)</li>
+              <li>Validates SSL certificates</li>
+              <li>Analyzes page content with AI</li>
+              <li>Checks multiple databases</li>
+            </ul>
+            <strong>Performance tip:</strong> Results are cached for 10 minutes, so revisiting the same domain is instant.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tips for Staying Safe -->
+      <div class="section">
+        <h2>Tips for Staying Safe Online</h2>
+        
+        <div class="tip-box">
+          <strong>🔍 Always verify URLs</strong><br>
+          Check that the URL matches the legitimate site. Phishers often use similar-looking domains like "paypa1.com" instead of "paypal.com".
+        </div>
+        
+        <div class="tip-box">
+          <strong>🔒 Look for HTTPS</strong><br>
+          Legitimate sites use HTTPS (padlock icon). Never enter passwords or payment info on HTTP sites.
+        </div>
+        
+        <div class="tip-box">
+          <strong>📧 Be skeptical of urgent emails</strong><br>
+          Phishing emails often create urgency ("Your account will be closed!"). Legitimate companies don't pressure you like this.
+        </div>
+        
+        <div class="tip-box">
+          <strong>🎣 Don't click suspicious links</strong><br>
+          Hover over links to see where they really go. If it looks suspicious, don't click it.
+        </div>
+        
+        <div class="tip-box">
+          <strong>💳 Use unique passwords</strong><br>
+          Use a password manager and unique passwords for each site. If one site is compromised, others stay safe.
+        </div>
+      </div>
+      
+      <!-- Troubleshooting -->
+      <div class="section">
+        <h2>Troubleshooting</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">The extension isn't working</div>
+          <div class="faq-answer">
+            1. Check that the extension is enabled in Safari → Preferences → Extensions<br>
+            2. Make sure you've granted the extension permission to access websites<br>
+            3. Try reloading the page<br>
+            4. Restart Safari<br>
+            5. If issues persist, try reinstalling the extension
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">The popup shows "Unknown"</div>
+          <div class="faq-answer">
+            This can happen if:
+            <ul>
+              <li>The page hasn't finished loading yet - wait a moment and click "Rescan"</li>
+              <li>The site is on a non-HTTP/HTTPS protocol (file://, about:, etc.)</li>
+              <li>The extension doesn't have permission for this site</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact -->
+      <div class="section">
+        <h2>Need More Help?</h2>
+        <div class="faq-item">
+          <div class="faq-answer">
+            If you have questions, found a bug, or want to report a false positive:
+            <ul>
+              <li>Email: support@phishguard.com (replace with your actual email)</li>
+              <li>GitHub: github.com/yourusername/phishguard (if open source)</li>
+            </ul>
+            <br>
+            We appreciate your feedback and use it to improve PhishGuard!
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p><strong>PhishGuard</strong> - Protecting you from online threats</p>
+      <p style="margin-top: 10px;">
+        <a href="disclaimer.html">Disclaimer</a> • 
+        <a href="privacy.html">Privacy Policy</a> • 
+        <a href="help.html">Help & FAQ</a>
+      </p>
+      <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">
+        © 2025 PhishGuard. All rights reserved.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
